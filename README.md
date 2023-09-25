@@ -69,7 +69,7 @@ where `a` is the minimum support and `b` the maximum support of the distribution
 ## Usage
 
 ```javascript
-import stdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-stdev@deno/mod.js';
+import stdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-stdev@v0.1.0-deno/mod.js';
 ```
 
 #### stdev( a, b )
@@ -135,7 +135,7 @@ v = stdev( -1, -2 );
 
 ```javascript
 import randint from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import stdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-stdev@deno/mod.js';
+import stdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-discrete-uniform-stdev@v0.1.0-deno/mod.js';
 
 var randa = randint.factory( 0, 10 );
 var randb = randint.factory();
