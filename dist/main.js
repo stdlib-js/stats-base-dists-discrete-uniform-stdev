@@ -1,7 +1,7 @@
-/*
+/**
 * @license Apache-2.0
 *
-* Copyright (c) 2019 The Stdlib Authors.
+* Copyright (c) 2018 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,19 +16,29 @@
 * limitations under the License.
 */
 
-// TypeScript Version: 4.1
+'use strict';
+
+// MODULES //
+
+var isnan = require( '@stdlib/math-base-assert-is-nan' );
+var isInteger = require( '@stdlib/math-base-assert-is-integer' );
+var pow = require( '@stdlib/math-base-special-pow' );
+var sqrt = require( '@stdlib/math-base-special-sqrt' );
+
+
+// VARIABLES //
+
+var SQRT1O12 = sqrt( 1.0/12.0 );
+
+
+// MAIN //
 
 /**
 * Returns the standard deviation of a discrete uniform distribution.
 *
-* ## Notes
-*
-* -   If `a` or `b` is not an integer value, the function returns `NaN`.
-* -   If provided `a >= b`, the function returns `NaN`.
-*
-* @param a - minimum support
-* @param b - maximum support
-* @returns standard deviation
+* @param {integer} a - minimum support
+* @param {integer} b - maximum support
+* @returns {PositiveNumber} standard deviation
 *
 * @example
 * var v = stdev( 0, 1 );
@@ -58,9 +68,20 @@
 * var v = stdev( NaN, 2 );
 * // returns NaN
 */
-declare function stdev( a: number, b: number ): number;
+function stdev( a, b ) {
+	if (
+		isnan( a ) ||
+		isnan( b ) ||
+		!isInteger( a ) ||
+		!isInteger( b ) ||
+		a > b
+	) {
+		return NaN;
+	}
+	return SQRT1O12 * sqrt( ( pow( b-a+1, 2.0 ) - 1.0 ) );
+}
 
 
 // EXPORTS //
 
-export = stdev;
+module.exports = stdev;
