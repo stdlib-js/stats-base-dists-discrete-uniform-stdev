@@ -2,6 +2,63 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2025-01-11)
+
+<section class="features">
+
+### Features
+
+-   [`e4ab52c`](https://github.com/stdlib-js/stdlib/commit/e4ab52c3e0d69d8544d2eba65077a36afc334781) - add C implementation for `stats/base/dists/discrete-uniform/stdev` [(#4556)](https://github.com/stdlib-js/stdlib/pull/4556)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3561](https://github.com/stdlib-js/stdlib/issues/3561)
+
+</section>
+
+<!-- /.issues -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`e4ab52c`](https://github.com/stdlib-js/stdlib/commit/e4ab52c3e0d69d8544d2eba65077a36afc334781) - **feat:** add C implementation for `stats/base/dists/discrete-uniform/stdev` [(#4556)](https://github.com/stdlib-js/stdlib/pull/4556) _(by Prashant Kumar Yadav, Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Philipp Burckhardt
+-   Prashant Kumar Yadav
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.1">
 
 ## 0.2.1 (2024-07-28)
