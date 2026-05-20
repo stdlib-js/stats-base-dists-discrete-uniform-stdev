@@ -1,30 +1,5 @@
+"use strict";var n=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var u=n(function(p,s){
+var t=require('@stdlib/math-base-assert-is-integer/dist'),v=require('@stdlib/math-base-special-pow/dist'),i=require('@stdlib/math-base-special-sqrt/dist'),a=i(1/12);function q(e,r){return!t(e)||!t(r)||e>r?NaN:a*i(v(r-e+1,2)-1)}s.exports=q
+});var o=u();module.exports=o;
 /** @license Apache-2.0 */
-
-'use strict';
-
-/**
-* Discrete uniform distribution standard deviation.
-*
-* @module @stdlib/stats-base-dists-discrete-uniform-stdev
-*
-* @example
-* var stdev = require( '@stdlib/stats-base-dists-discrete-uniform-stdev' );
-*
-* var v = stdev( 0, 1 );
-* // returns ~0.5
-*
-* v = stdev( 4, 12 );
-* // returns ~2.582
-*
-* v = stdev( 2, 8 );
-* // returns 2.0
-*/
-
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+//# sourceMappingURL=index.js.map
