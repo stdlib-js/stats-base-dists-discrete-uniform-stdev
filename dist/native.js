@@ -1,7 +1,7 @@
-/*
+/**
 * @license Apache-2.0
 *
-* Copyright (c) 2019 The Stdlib Authors.
+* Copyright (c) 2025 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,19 +16,22 @@
 * limitations under the License.
 */
 
-// TypeScript Version: 4.1
+'use strict';
+
+// MODULES //
+
+var addon = require( './../src/addon.node' );
+
+
+// MAIN //
 
 /**
 * Returns the standard deviation of a discrete uniform distribution.
 *
-* ## Notes
-*
-* -   If `a` or `b` is not an integer value, the function returns `NaN`.
-* -   If provided `a > b`, the function returns `NaN`.
-*
-* @param a - minimum support
-* @param b - maximum support
-* @returns standard deviation
+* @private
+* @param {integer} a - minimum support
+* @param {integer} b - maximum support
+* @returns {PositiveNumber} standard deviation
 *
 * @example
 * var v = stdev( 0, 1 );
@@ -41,26 +44,12 @@
 * @example
 * var v = stdev( -4, 4 );
 * // returns ~2.582
-*
-* @example
-* var v = stdev( 1, -0.1 );
-* // returns NaN
-*
-* @example
-* var v = stdev( 0.5, 1 );
-* // returns NaN
-*
-* @example
-* var v = stdev( 2, NaN );
-* // returns NaN
-*
-* @example
-* var v = stdev( NaN, 2 );
-* // returns NaN
 */
-declare function stdev( a: number, b: number ): number;
+function stdev( a, b ) {
+	return addon( a, b );
+}
 
 
 // EXPORTS //
 
-export = stdev;
+module.exports = stdev;
